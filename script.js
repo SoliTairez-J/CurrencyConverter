@@ -15,7 +15,7 @@ amount_two.addEventListener('input',calculateMoney)
 function calculateMoney(){
     const one = currency_one.value;
     const two = currency_two.value;
-    fetch (`https://v6.exchangerate-api.com/v6/8b9ed7c13dede817cb2eebca/latest/${one}`)
+    fetch (`https://v6.exchangerate-api.com/v6/apiuser/latest/${one}`)
     .then(res=>res.json()).then(data=>{
         const rate = data.conversion_rates[two];
         rateText.innerText=`1 ${one} = ${rate} ${two}`
